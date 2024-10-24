@@ -2,7 +2,9 @@
 # HP-PrimeWeb
 #### Internet on the HP Prime
 
-
+## Important
+You must change SSID and PASSWORD at the top of the ESP32 code to your wifi name and password.
+  
 ## Setup
 
 You need a Arduino Leonardo (You can find one for $10 online. [The one I use!](https://www.keyestudio.com/products/keyestudio-atmega32u4-leonardo-r3-development-board-1m-micro-usb-cable-for-diy-project)). You are also going to need an ESP32 dev board. I was able to find one on AliExpress for $1. 
