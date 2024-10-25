@@ -29,10 +29,11 @@ void loop() {
     uint8_t hidbuffer[64];
     memset(hidbuffer, 0, sizeof(hidbuffer));
     int websiteLength = website.length();
-    int rounds = (websiteLength / 64) + (websiteLength % 64 > 0 ? 1 : 0);  // Get the number of round WORKS
-
+    int rounds = (websiteLength / 64) + (websiteLength % 64 > 0 ? 1 : 0);  // Get the number of round WORKS thanks chatgpt
+    uint8_t dummy[1] = {1};
+    RawHID.write(dummy, sizeof(dummy));
     for (int i = 0; i < rounds; i++) {  // for each of the rounds IS CORRECT
-      int startIndex = i * 64;          //
+      int startIndex = i * 64;          
       int endIndex = min((i + 1) * 64, websiteLength);
       String currentSubString = website.substring(startIndex, endIndex);
       for (int a = 0; a < currentSubString.length(); a++) {
@@ -44,6 +45,7 @@ void loop() {
 
   if (bytesAvailable) {
     String url = RawHID.readString();
+    url.trim();
     Serial1.print(url);
   }
 }
