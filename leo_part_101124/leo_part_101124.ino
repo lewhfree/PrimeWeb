@@ -5,10 +5,10 @@ uint8_t rawhidData[64];
 void setup() {
   delay(3000); // allows calculator to get up to speed and for esp32 to boot.
   Serial1.begin(BAUDRATE);
-  Serial.begin(BAUDRATE);
+  //Serial.begin(BAUDRATE); Turn this off when using the HID.
   RawHID.begin(rawhidData, sizeof(rawhidData));
   Serial1.setTimeout(100);
-  Serial.setTimeout(500);
+  //Serial.setTimeout(500);
   RawHID.setTimeout(500);
 
 }
