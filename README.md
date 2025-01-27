@@ -1,7 +1,7 @@
 
 # HP-PrimeWeb
 #### Internet on the HP Prime
-
+# DOESN"T WORK DONT TRY - ABANDONED
 ## Important
 You must change SSID and PASSWORD at the top of the ESP32 code to your wifi name and password.
   
